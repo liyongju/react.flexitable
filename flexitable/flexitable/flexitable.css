@@ -1,0 +1,255 @@
+/*
+ *	Scrollbar
+ */
+.public_Scrollbar_main {
+  box-sizing: border-box;
+  outline: none;
+  overflow: hidden;
+  position: absolute;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.public_Scrollbar_mainVertical {
+  bottom: 0;
+  right: 0;
+  top: 0;
+  -webkit-transition-property: background-color width;
+  transition-property: background-color width;
+  width: 15px; }
+  .public_Scrollbar_mainVertical .Scrollbar_mainActive, .public_Scrollbar_mainVertical:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    /*width: 15px;*/ }
+
+.public_Scrollbar_mainHorizontal {
+  bottom: 0;
+  height: 15px;
+  left: 0;
+  -webkit-transition-property: background-color height;
+  transition-property: background-color height; }
+  .public_Scrollbar_mainHorizontal .Scrollbar_mainActive, .public_Scrollbar_mainHorizontal:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 17px; }
+
+.Scrollbar_mainOpaque,
+.Scrollbar_mainOpaque.Scrollbar_mainActive,
+.Scrollbar_mainOpaque:hover {
+  background-color: #fff; }
+
+.Scrollbar_face {
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1; }
+  .Scrollbar_face:after {
+    background-color: #c2c2c2;
+    border-radius: 6px;
+    content: '';
+    display: block;
+    position: absolute;
+    -webkit-transition: background-color 250ms ease;
+    transition: background-color 250ms ease; }
+
+.public_Scrollbar_main:hover .Scrollbar_face:after,
+.Scrollbar_mainActive .Scrollbar_face:after,
+.Scrollbar_faceActive:after {
+  background-color: #7d7d7d; }
+
+.Scrollbar_faceHorizontal {
+  bottom: 0;
+  left: 0;
+  top: 0; }
+  .Scrollbar_faceHorizontal:after {
+    bottom: 4px;
+    left: 0;
+    top: 4px;
+    width: 100%; }
+
+.Scrollbar_faceVertical {
+  left: 0;
+  right: 0;
+  top: 0; }
+  .Scrollbar_faceVertical:after {
+    height: 100%;
+    left: 4px;
+    right: 4px;
+    top: 0; }
+
+/*
+ *	FlexiTable
+ */
+.public_flexiTable_main {
+  border: solid 1px #d3d3d3;
+  overflow: hidden;
+  position: relative; }
+
+.public_flexiTable_header {
+  border-bottom: solid 1px #d3d3d3;
+  background-color: #f6f7f8;
+  background-image: -webkit-linear-gradient(#fff, #efefef);
+  background-image: linear-gradient(#fff, #efefef); }
+  .public_flexiTable_header .public_flexiTableCell_main {
+    font-weight: bold;
+    background-color: #f6f7f8;
+    background-image: -webkit-linear-gradient(#fff, #efefef);
+    background-image: linear-gradient(#fff, #efefef); }
+
+.public_flexiTable_footer .public_flexiTableCell_main {
+  background-color: #f6f7f8;
+  border-top: solid 1px #d3d3d3; }
+
+.flexiTable_shadow {
+  background: 0 0 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAECAYAAABP2FU6AAAAF0lEQVR4AWPUkNeSBhHCjJoK2twgFisAFagCCp3pJlAAAAAASUVORK5CYII=) repeat-x;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 1; }
+
+.flexiTable_rowsContainer {
+  overflow: hidden;
+  position: relative; }
+
+.flexiTable_horizontalScrollbar {
+  bottom: 0;
+  position: absolute; }
+  .flexiTable_horizontalScrollbar .public_Scrollbar_mainHorizontal {
+    background: #fff; }
+
+/*
+ *	FlexiTableCell
+ */
+.public_flexiTableCell_main {
+  background-color: #fff;
+  border: solid 1px #d3d3d3;
+  border-width: 0 1px 0 0;
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  white-space: normal; }
+
+.public_flexiTableCell_lastChild {
+  border-width: 0 1px 1px 0; }
+
+.public_flexiTableCell_highlighted {
+  background-color: #f4f4f4; }
+
+.public_flexiTableCell_alignRight {
+  text-align: right; }
+
+.public_flexiTableCell_alignCenter {
+  text-align: center; }
+
+.public_flexiTableCell_wrap1 {
+  display: table;
+  overflow: hidden; }
+
+.public_flexiTableCell_wrap2 {
+  display: table-row; }
+
+.public_flexiTableCell_wrap3 {
+  display: table-cell;
+  vertical-align: middle; }
+
+.public_flexiTableCell_cellContent {
+  padding: 8px; }
+
+.flexiTableCell_columnResizerContainer {
+  position: absolute;
+  right: 0px;
+  width: 6px;
+  z-index: 1; }
+  .flexiTableCell_columnResizerContainer:hover {
+    cursor: ew-resize; }
+    .flexiTableCell_columnResizerContainer:hover .flexiTableCell_columnResizerKnob {
+      visibility: visible; }
+
+.flexiTableCell_columnResizerKnob {
+  background-color: #aaa;
+  position: absolute;
+  right: 0px;
+  visibility: hidden;
+  width: 2px; }
+
+/*
+ *	FlexiTableCellGroup
+ */
+.flexiTableCellGroup_cellGroup {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  white-space: nowrap; }
+
+.flexiTableCellGroup_cellGroup > .public_flexiTableCell_main {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal; }
+
+.flexiTableCellGroup_cellGroupWrapper {
+  position: absolute;
+  top: 0; }
+
+/*
+ * FlexiTableColumnResizerLine
+ */
+.flexiTableColumnResizerLine_mouseArea {
+  cursor: ew-resize;
+  position: absolute;
+  right: -5px;
+  width: 12px; }
+
+.flexiTableColumnResizerLine_main {
+  border-right: 1px solid #aaa;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 10; }
+
+.flexiTableColumnResizerLine_hiddenElem {
+  display: none !important; }
+
+/*
+ *	FlexiTableRow
+ */
+.public_flexiTableRow_main {
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  top: 0; }
+
+.flexiTableRow_body {
+  left: 0;
+  position: absolute;
+  top: 0; }
+
+.public_flexiTableRow_highlighted,
+.public_flexiTableRow_highlighted .public_flexiTableCell_main {
+  background-color: #f6f7f8; }
+
+.flexiTableRow_fixedColumnsDivider {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-left: solid 1px #d3d3d3;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0; }
+
+.flexiTableRow_columnsShadow {
+  background: 0 0 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAAFklEQVQIHWPSkNeSBmJhTQVtbiDNCgASagIIuJX8OgAAAABJRU5ErkJggg==) repeat-y;
+  width: 4px; }
+
+.flexiTableRow_rowWrapper {
+  position: absolute;
+  top: 0; }
+
+/*# sourceMappingURL=flexitable.css.map */
